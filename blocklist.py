@@ -9,7 +9,6 @@ urls = []
 
 for li in soup.find_all('li', {'class': 'bdTick'}):
     if 'http' in li.text:
-        #print(li.text.split(':', 1)[1])
         urls.append(li.text.split(':', 1)[1])
         
 print(*urls)
